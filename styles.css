@@ -308,7 +308,7 @@ footer{
     width: calc(100% - 2rem);
     max-width: calc(1200px - 2rem);
     margin: 0 auto;
-    box-shadow: var(--box-shadow-sm);
+    box-shadow: var(--box-shadow-lg);
 }
 
 /* --------------BEGIN ACTIVITY STYLES----------------- */
@@ -323,6 +323,15 @@ footer{
 /* content, padding, borders, margin, dev tools, inline, & block elements */
 
 /* For both links in the section */
+#section2 a{
+    display: block; /* This will make the links block-level elements */
+    text-decoration: none; /* This will remove the underline */
+    text-align: center; /* This will align the text to the center */
+    font-size: 1.1rem; /* This will set the font size to 1.1rem */
+    font-weight: bold; /* This will make the text bold */
+    width: 50%; /* This will set the width of each link to 50% of its container */
+    box-shadow: var(--box-shadow-lg); /* This will add a large box shadow */
+}
 /* 
     TO DO: add styles to both links in this section that will:
         - make these links display as block-level elements
@@ -361,6 +370,12 @@ footer{
 }
 
 /* For the last paragraph in the section */
+#section2 div > p:last-of-type{
+    background-color: var(--teal-rgba);
+    border: 4px dashed var(--dk-gray);
+    margin: 16px 60px 32px 8px;
+    padding: 32px 8px 16px 60px;
+}
 /* 
     TO DO: add styles to the last paragraph in this section that will:
         - make the background the teal-rgba color
@@ -376,9 +391,6 @@ footer{
             - bottom: 16px
             - left: 60px
 */
-#section2 div > p:last-of-type{
-    
-}
 
  /* For the div wrapped around that paragraph to show the space its taking up within its container */
 #section2 div{
@@ -394,6 +406,10 @@ footer{
         - add the small box shadow, using the variable in the root
 */
 #section2 a:first-of-type:hover{
+    background-color: var(--dk-blue);
+    color: var(--white);
+    border-color: var(--lt-blue);
+    box-shadow: var(--box-shadow-sm);   
 
 }
 
@@ -418,6 +434,11 @@ footer{
         - add the small filter drop shadow from the CSS variables in the root
 */
 #section3 img{
+    display: block;
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    filter: var(--filter-shadow-sm);
     
 }
 
@@ -460,6 +481,16 @@ footer{
         - move this to the right from its original location by 25px
 */
 #section3 div::after{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--lt-blue);
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    top: -50px;
+    left: 25px;
 }
 
 
